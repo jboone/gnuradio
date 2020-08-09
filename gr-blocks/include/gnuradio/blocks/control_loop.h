@@ -336,9 +336,9 @@ static float tanh_lut_table[256] = {
  */
 static inline float tanhf_lut(float x)
 {
-    if (x > 2)
+    if (x >= 2)
         return 1;
-    else if (x <= -2)
+    else if (x < -2)
         return -1;
     else {
         int index = 128 + 64 * x;
